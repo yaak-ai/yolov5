@@ -16,8 +16,8 @@ def SaveBoundingBoxToFile(image_root, annotations_root, image_id, label, x_min, 
 				f.write(' '.join([str(trainable_codes.index(label)),
 		                    str(round((x_max+x_min)/2, 6)),
 		                    str(round((y_max+y_min)/2, 6)),
-		                    str(round(x_max-x_min, 6)),
-		                    str(round(y_max-y_min, 6))])+'\n')
+		                    str(min(round(x_max-x_min, 6), 0.99)),
+		                    str(min(round(y_max-y_min, 6), 0.99))])+'\n')
 
 
 if __name__ == '__main__':
