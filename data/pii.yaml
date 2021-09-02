@@ -9,8 +9,8 @@
 
 # Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
 path: /nas/3rd_party/pii-redaction  # dataset root dir
-train: lists/train-uniq.txt  # train images (relative to 'path') 128 images
-val: lists/validation-uniq.txt  # val images (relative to 'path') 128 images
+train: annotations-v2/train-list.txt  # train images (relative to 'path') 128 images
+val: annotations-v2/validation-list.txt  # val images (relative to 'path') 128 images
 test:  # test images (optional)
 
 # Classes

@@ -45,7 +45,7 @@ if __name__ == '__main__':
 		# Comment this line for ALL CLASSES
 		df = df.loc[df['LabelName'].isin(trainable_codes)]
 
-		tqdm.pandas(desc=f"Mapping OpenImagesV6 annotations in {filename} to YOLOV5")
+		tqdm.pandas(desc=f"Mapping OpenImagesV6 annotations in {filename.name} to YOLOV5")
 
 		# Save the bounding box data to the files
 		df.progress_apply(lambda x: SaveBoundingBoxToFile(args.images_dir, args.annotations_dir, x['ImageID'], x['LabelName'], x['XMin'], x['XMax'], x['YMin'], x['YMax']), axis=1)
